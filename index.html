@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #0e1538;
+    }
+
+    .frem{
+        position: relative;
+        width: 300px;
+        height: 500px;
+        /* background: white; */
+    }
+    .frem::before{
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        transform: skewX(2deg) skewY(4deg);
+        background: linear-gradient(315deg, #00ccff, #0e1538, #d400d4);
+    }
+
+    .frem::after{
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        transform: skewX(2deg) skewY(4deg);
+        background: linear-gradient(315deg, #00ccff, #0e1538, #d400d4);
+        filter: blur(50px);
+    }
+
+    .center-cant{
+        width: 300px;
+        height: 500px;
+        background: #0e1538;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        padding: 6px;
+        border-radius: 0px 12px 0px 12px;
+        overflow: hidden;
+    }
+    .center-cant img{
+        width: 100%;
+        height: 414px;
+        object-fit: cover;
+        border-radius: 0px 12px 0px 12px;
+    }
+    .center-cant .row{
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .center-cant .row p{
+        color: white;
+        letter-spacing: 1px;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .center-cant .row h2{
+        color: #00ffd7;
+        font-size: 18px;
+        padding: 12px;
+        background: #00000047;
+        letter-spacing: 1px;
+        border-radius: 0px 12px 0px 12px;
+    }
+</style>
+
+<body>
+    <div class="frem">
+        <div class="center-cant">
+            <img src="./imgs.jpg" alt="">
+            <div class="row">
+                <p>The Adam Project</p>
+                <h2>6.8/10</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
